@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap');
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+aside{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 50%;
+    background-color: #0f5830;
+    color: #ffffff;
+}
+
+aside > p{
+    display: block;
+    width: 80%;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 44px;
+}
+
+aside span{
+    display: block;
+    margin-top: 16px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 16px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 50%;
+    
+}
+
+.cadastro{
+    width: 50%;
+    box-sizing: border-box;  
+}
+
+.cadastro h1{
+    margin-bottom: 0;
+}
+
+.cadastro label{
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.cadastro label a{
+    float: right;
+}
+
+.cadastro input{
+    width: 100%;
+    padding: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.cadastro input:focus{
+    outline-color: #0f5830;
+}
+
+.cadastro button{
+    display: block;
+    width: 100%;
+    margin: 24px 0 18px 0;
+    padding: 4px;
+    background-color: #0f5830;
+    border-width: none;
+    border-style: solid;
+    border-color: transparent;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cadastro button:hover{
+    background-color: #0d2e1c;
+}
+
+.cadastro a{
+    color: #0f5830;
+    text-decoration: none;
+}
+
+.cadastro a:hover{
+    color: #0d2e1c;
+    text-decoration: underline;
+}
+
+.registro {
+    text-align: center;
+}
+
+.dashboard{
+    background-color: #ededed;
+}
+
+.dashboard__body{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header{
+    background-color: #ffffff;
+}
+
+.dashboard__header{
+    display: flex;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.dashboard__title{
+    font-size: 16px;
+    color: #0f5830;
+}
+
+.dashboard__title span{
+    display: block;
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.dashboard__menu{
+    margin-left: auto;
+}
+
+.dashboard__menu a{
+    display: inline-block;
+    margin: 0 8px;
+    color: #0f5830;
+    text-decoration: none;
+}
+
+.dashboard__menu a:hover{
+    text-decoration: underline;
+}
+
+.dashboard__hero{
+    margin: 40px 0;
+    font-size: 14px;
+    color: #999999;
+}
+
+.dashboard__hero h2{
+    margin-bottom: 0px;
+    font-size: 32px;
+    color: #0f5830;
+}
+
+.card{
+    display: flex;
+    padding: 24px;
+    margin: 16px 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.card__group{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.card__body{
+    width: 60%;
+    margin-right: auto;
+}
+
+.card__footer{
+    align-self: center;
+}
+
+.card__badge{
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #0f5830;
+    background-color: #cccccc;
+}
+
+.card__title{
+    margin: 8px 0;
+    font-size: 18px;
+    color: #0f5830;
+}
+
+.card p{
+    font-size: 14px;
+    color: #999999;
+}
+
+.card__progress{
+    height: 12px;
+    border-radius: 8px;
+    background-color: #cccccc;
+}
+
+.card__progress div{
+    height: 12px;
+    font-size: 9px;
+    color: #ffffff;
+    text-align: right;
+    border-radius: 8px;
+    background-color: #0f5830;
+}
+
+.card__button{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0f5830;
+    border-width: none;
+    border-style: solid;
+    border-color: transparent;
+    color: #ffffff;
+    text-align: center;
+}
+
+.card--33{
+    width: 33%;
+}
+
+.card--33 .card__body{
+    width: 100%;
+}
+
+.card__badge--title{
+    padding: 0;
+    text-transform: none;
+    color: #333333;
+    background-color: transparent;
+}
