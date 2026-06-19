@@ -1,0 +1,47 @@
+@media (max-width: 768px){
+    aside{
+        display: none;
+    }
+
+    main,
+    .cadastro{
+        width: 100%;
+    }
+
+    main{
+        padding: 0 16px;
+    }
+
+    .dashboard__menu{
+        display: none;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+
+    .card__body{
+        width: 100%;
+    }
+
+    .card__footer{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .card__button{
+        display: block;
+        width: 100%;
+    }
+
+    .card__group{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card--33{
+        width: 100%;
+    }
+
+
+}
