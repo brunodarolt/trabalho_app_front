@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-// O import SEM chaves { } procura pelo export default
 import LoginPage from './pages/LoginPage'; 
 import CadastroPasso1 from './pages/CadastroPasso1';
 import CadastroPasso2 from './pages/CadastroPasso2';
