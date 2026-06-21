@@ -6,15 +6,16 @@ O desenvolvimento da interface será realizado de forma gradual, iniciando com H
 #Como criar e executar o projeto
 
  1. Criar o projeto React com Vite
+
 npm create vite@latest app-aluno-react
 (escolher: React + JavaScript)
-2. Acessar a pasta
+3. Acessar a pasta
 cd app-aluno-react
-3. Instalar as dependências
+4. Instalar as dependências
 npm install
-4. Instalar o React Router
+5. Instalar o React Router
 npm install react-router-dom
-5. Executar em modo de desenvolvimento (http://localhost:5173)
+6. Executar em modo de desenvolvimento (http://localhost:5173)
 npm run dev
 
 ##Estrutura de pastas:
