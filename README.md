@@ -56,10 +56,7 @@ npm start
 npm run build
 ```
 
-## Estrutura atual
 
-```text
-.
 ## Estrutura atual
 
 ```text
@@ -97,8 +94,6 @@ npm run build
 ├── package-lock.json
 ├── package.json
 └── README.md
-```
-
 ```
 
 ## Etapas sugeridas para os alunos
