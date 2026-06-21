@@ -16,8 +16,8 @@ const Disciplinas = () => {
           {/* O Link permite navegar sem recarregar a página */}
           <Link to="/dashboard"><LayoutGrid size={18} /> Painel</Link>
           <Link to="/disciplinas" className="active"><BookOpen size={18} /> Disciplinas</Link>
-          <Link to="#"><Bot size={18} /> Tutor IA</Link>
-          <Link to="#"><User size={18} /> Perfil</Link>
+          <Link to="/tutor"><Bot size={18} /> Tutor IA</Link>
+          <Link to="/perfil"><User size={18} /> Perfil</Link>
         </nav>
       </header>
 

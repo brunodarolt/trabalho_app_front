@@ -600,3 +600,282 @@ header{
 .btn-block:hover {
   background-color: #1b5e20;
 }
+
+/* =========================================
+   ESTILOS DA PÁGINA DE PERFIL
+========================================= */
+
+/* Cabeçalho do Perfil (Avatar + Info) */
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #1b5e20; /* Verde escuro */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.perfil-info h1 {
+  color: #1c2b36;
+  font-size: 28px;
+  margin: 0 0 5px 0;
+}
+
+.perfil-info p {
+  color: #627d98;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Abas internas (Dados Pessoais, etc) */
+.perfil-tabs {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+
+.perfil-tabs .tab {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #627d98;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+}
+
+.perfil-tabs .tab.active {
+  color: #2e7d32;
+}
+
+/* A linha verde por baixo da aba ativa */
+.perfil-tabs .tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2e7d32;
+}
+
+/* Cartão da lista de dados */
+.perfil-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.perfil-row {
+  display: flex;
+  padding: 24px 30px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Remove a linha de baixo do último item */
+.perfil-row:last-child {
+  border-bottom: none;
+}
+
+.perfil-label {
+  width: 250px; /* Mantém as colunas da esquerda todas alinhadas */
+  color: #627d98;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.perfil-value {
+  color: #1c2b36;
+  font-size: 15px;
+}
+
+.text-muted {
+  color: #888;
+}
+
+/* =========================================
+   ESTILOS DA PÁGINA DO TUTOR IA
+========================================= */
+
+/* Trava a tela para o chat não rolar a página inteira, só as mensagens */
+.chat-page-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 40px 20px 150px 20px; /* O espaço de 150px embaixo impede que o input esconda a última mensagem */
+}
+
+.chat-history {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.chat-message {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Avatares */
+.chat-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.avatar-user {
+  background-color: #2b9e76; /* Verde um pouco mais claro que o principal */
+  color: white;
+  font-size: 14px;
+}
+
+.avatar-ai {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* Conteúdo das mensagens */
+.chat-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  color: #111;
+}
+
+.chat-content p {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Ícones debaixo da resposta da IA */
+.chat-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.chat-actions button {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.chat-actions button:hover {
+  color: #333;
+}
+
+/* BARRA DE INPUT FLUTUANTE */
+.chat-bottom-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Cria um degradê para a barra não ficar "solta" visualmente */
+  background: linear-gradient(180deg, transparent, #f8f9fa 30%);
+}
+
+.chat-input-wrapper {
+  background: white;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  gap: 12px;
+}
+
+.btn-attach {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.btn-attach:hover {
+  background-color: #f0f0f0;
+}
+
+.chat-input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 10px 0;
+  font-size: 15px;
+  outline: none;
+  color: #333;
+}
+
+.chat-input::placeholder {
+  color: #999;
+}
+
+.btn-send {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-send:hover {
+  background-color: #1b5e20;
+}
+
+.chat-disclaimer {
+  font-size: 12px;
+  color: #888;
+  margin-top: 15px;
+}

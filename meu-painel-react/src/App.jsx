@@ -7,7 +7,9 @@ import CadastroPasso2 from './pages/CadastroPasso2';
 import RecuperarSenha from './pages/RecuperarSenha';
 import NovaSenha from './pages/NovaSenha';
 import Dashboard from './pages/Dashboard';
-import Disciplinas from './pages/Disciplinas'; // <-- IMPORT CONFIRMADO
+import Disciplinas from './pages/Disciplinas';
+import MeuPerfil from './pages/MeuPerfil';
+import TutorIA from './pages/TutorIA';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/disciplinas" element={<Disciplinas />} /> {/* <-- ROTA CONFIRMADA */}
+        <Route path="/disciplinas" element={<Disciplinas />} />
+        <Route path='/perfil' element={<MeuPerfil />} />
+        <Route path='/tutor' element={<TutorIA />} />
       </Routes>
     </BrowserRouter>
   );
