@@ -3,6 +3,28 @@ import { Link } from 'react-router-dom';
 import { LayoutGrid, BookOpen, Bot, User } from 'lucide-react';
 
 const Disciplinas = () => {
+  // 1. Criámos a coleção de dados (Array de objetos) conforme exigido no Requisito 4
+  const listaDisciplinas = [
+    {
+      id: 1,
+      nome: 'Front-end',
+      professor: 'PROF. MARCO SILVA',
+      status: 'EM CURSO',
+      tipoBadge: 'badge-curso',
+      textoProgresso: 'Progresso',
+      percentagem: 75
+    },
+    {
+      id: 2,
+      nome: 'UX Design',
+      professor: 'DRA. ANA LÚCIA',
+      status: 'PRÓXIMO SEMESTRE',
+      tipoBadge: 'badge-semestre',
+      textoProgresso: 'Disponibilidade',
+      percentagem: 0
+    }
+  ];
+
   return (
     <div className="dashboard-bg">
       {/* Cabeçalho */}
@@ -13,7 +35,6 @@ const Disciplinas = () => {
         </div>
         
         <nav className="dash-nav">
-          {/* O Link permite navegar sem recarregar a página */}
           <Link to="/dashboard"><LayoutGrid size={18} /> Painel</Link>
           <Link to="/disciplinas" className="active"><BookOpen size={18} /> Disciplinas</Link>
           <Link to="/tutor"><Bot size={18} /> Tutor IA</Link>
@@ -25,54 +46,31 @@ const Disciplinas = () => {
       <main className="dash-main">
         <h1 className="page-title">Minhas Disciplinas</h1>
 
+        {/* 2. Aqui acontece a renderização dinâmica da lista usando o .map() */}
         <div className="disciplinas-grid">
-          
-          {/* Cartão 1: Front-end */}
-          <div className="dash-card disciplina-card">
-            <div className="card-top">
-              <div>
-                <h3>Front-end</h3>
-                <p className="prof-name">PROF. MARCO SILVA</p>
+          {listaDisciplinas.map((disciplina) => (
+            <div key={disciplina.id} className="dash-card disciplina-card">
+              <div className="card-top">
+                <div>
+                  <h3>{disciplina.nome}</h3>
+                  <p className="prof-name">{disciplina.professor}</p>
+                </div>
+                <span className={`badge ${disciplina.tipoBadge}`}>{disciplina.status}</span>
               </div>
-              <span className="badge badge-curso">EM CURSO</span>
+              
+              <div className="progress-section">
+                <div className="progress-labels">
+                  <span>{disciplina.textoProgresso}</span>
+                  <span>{disciplina.percentagem}%</span>
+                </div>
+                <div className="progress-bar-bg">
+                  <div className="progress-fill" style={{ width: `${disciplina.percentagem}%` }}></div>
+                </div>
+              </div>
+              
+              <button className="btn-block">Acessar Disciplina</button>
             </div>
-            
-            <div className="progress-section">
-              <div className="progress-labels">
-                <span>Progresso</span>
-                <span>75%</span>
-              </div>
-              <div className="progress-bar-bg">
-                <div className="progress-fill" style={{ width: '75%' }}></div>
-              </div>
-            </div>
-            
-            <button className="btn-block">Acessar Disciplina</button>
-          </div>
-
-          {/* Cartão 2: UX Design */}
-          <div className="dash-card disciplina-card">
-            <div className="card-top">
-              <div>
-                <h3>UX Design</h3>
-                <p className="prof-name">DRA. ANA LÚCIA</p>
-              </div>
-              <span className="badge badge-semestre">PRÓXIMO SEMESTRE</span>
-            </div>
-            
-            <div className="progress-section">
-              <div className="progress-labels">
-                <span>Disponibilidade</span>
-                <span>0%</span>
-              </div>
-              <div className="progress-bar-bg">
-                <div className="progress-fill" style={{ width: '0%' }}></div>
-              </div>
-            </div>
-            
-            <button className="btn-block">Acessar Disciplina</button>
-          </div>
-
+          ))}
         </div>
       </main>
     </div>

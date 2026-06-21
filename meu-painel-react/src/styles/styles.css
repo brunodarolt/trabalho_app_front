@@ -879,3 +879,18 @@ header{
   color: #888;
   margin-top: 15px;
 }
+
+/* =========================================
+   MENSAGEM DE ERRO (Requisito 7)
+========================================= */
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ef4444; /* Uma barra vermelha na lateral */
+  text-align: left;
+  font-weight: 500;
+}
