@@ -15,12 +15,8 @@ Além disso, foram definidos os componentes e páginas que servirão de base par
 Desenvolver as principais telas do sistema:
 
 * Dashboard
-* Alunos
-* Professores
-* Turmas
-* Matérias
-* Matrículas
-* Perfil do Usuário
+
+
 
 ## Objetivos da prática
 
@@ -30,7 +26,6 @@ Desenvolver as principais telas do sistema:
 * utilizar estados (useState)
 * implementar navegação entre páginas
 * criar layouts responsivos
-* preparar a aplicação para integração com backend
 
 ## Como usar este projeto
 
