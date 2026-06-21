@@ -1,41 +1,121 @@
-# trabalho_app_front
-Trabalho final da aula de Front-end.
+# Sistema Escolar
 
-O desenvolvimento da interface será realizado de forma gradual, iniciando com HTML e CSS puros, avançando para a implementação de responsividade e funcionalidades em JavaScript, e posteriormente reutilizando essa estrutura como base para o desenvolvimento em React.
+Projeto desenvolvido utilizando React com o objetivo de criar uma interface moderna para gerenciamento de informações escolares.
 
-#Como criar e executar o projeto
+A proposta é desenvolver a aplicação por etapas, iniciando pela criação dos componentes, páginas e estilização, evoluindo para navegação, gerenciamento de estado e integração com APIs.
 
- 1. Criar o projeto React com Vite
+## O que já existe
 
-npm create vite@latest app-aluno-react
-(escolher: React + JavaScript)
-3. Acessar a pasta
-cd app-aluno-react
-4. Instalar as dependências
+O repositório já possui a estrutura inicial do projeto React configurada.
+
+Além disso, foram definidos os componentes e páginas que servirão de base para o desenvolvimento da aplicação.
+
+## Próxima atividade
+
+Desenvolver as principais telas do sistema:
+
+* Dashboard
+* Alunos
+* Professores
+* Turmas
+* Matérias
+* Matrículas
+* Perfil do Usuário
+
+## Objetivos da prática
+
+* criar componentes reutilizáveis em React
+* organizar o projeto em páginas e componentes
+* trabalhar com propriedades (props)
+* utilizar estados (useState)
+* implementar navegação entre páginas
+* criar layouts responsivos
+* preparar a aplicação para integração com backend
+
+## Como usar este projeto
+
+### Instalar dependências
+
+```bash
 npm install
-5. Instalar o React Router
-npm install react-router-dom
-6. Executar em modo de desenvolvimento (http://localhost:5173)
+```
+
+### Executar em modo de desenvolvimento
+
+```bash
 npm run dev
+```
 
-##Estrutura de pastas:
+ou
 
-app-aluno-react/
-├── public/
+```bash
+npm start
+```
+
+(dependendo da ferramenta utilizada no projeto)
+
+### Gerar versão de produção
+
+```bash
+npm run build
+```
+
+## Estrutura atual
+
+```text
+.
 ├── src/
-│ ├── components/
-│ └── Header.jsx/
-│ ├── context/
-│ └── UserContext.jsx/
-│ ├── pages/
-│ └──
-│     ├──
-│ ├── services/
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── index.html
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
 ├── package.json
 └── README.md
+```
 
+## Etapas sugeridas para os alunos
 
+### Etapa 1 - Estrutura
+
+* criar os componentes principais
+* organizar as páginas do sistema
+* definir a estrutura de pastas
+
+### Etapa 2 - Interface
+
+* desenvolver os layouts das telas
+* aplicar estilização com CSS
+* criar componentes reutilizáveis
+
+### Etapa 3 - Navegação
+
+* configurar React Router
+* criar rotas entre páginas
+* implementar menus e navegação
+
+### Etapa 4 - Estados e Interações
+
+* utilizar useState
+* manipular formulários
+* exibir dados dinamicamente
+
+### Etapa 5 - Integração
+
+* consumir APIs
+* realizar operações de cadastro e consulta
+* tratar respostas e erros
+
+## Tecnologias Utilizadas
+
+* React
+* JavaScript
+* HTML5
+* CSS3
+* React Router
+
+## Autor
+
+Projeto acadêmico desenvolvido para fins de aprendizagem em React e desenvolvimento frontend.
