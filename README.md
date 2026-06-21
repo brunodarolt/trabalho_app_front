@@ -103,43 +103,37 @@ npm run build
 
 ## Etapas sugeridas para os alunos
 
-### Etapa 1 - Estrutura
+## Etapa 1 - Estrutura
 
 * criar os componentes principais
 * organizar as páginas do sistema
 * definir a estrutura de pastas
 
-### Etapa 2 - Interface
+## Etapa 2 - Interface
 
 * desenvolver os layouts das telas
 * aplicar estilização com CSS
 * criar componentes reutilizáveis
 
-### Etapa 3 - Navegação
+## Etapa 3 - Navegação
 
 * configurar React Router
 * criar rotas entre páginas
 * implementar menus e navegação
 
-### Etapa 4 - Estados e Interações
+## Etapa 4 - Estados e Interações
 
 * utilizar useState
 * manipular formulários
 * exibir dados dinamicamente
 
-### Etapa 5 - Integração
+## Etapa 5 - Integração
 
 * consumir APIs
 * realizar operações de cadastro e consulta
 * tratar respostas e erros
 
-## Tecnologias Utilizadas
 
-* React
-* JavaScript
-* HTML5
-* CSS3
-* React Router
 
 ## final
 
