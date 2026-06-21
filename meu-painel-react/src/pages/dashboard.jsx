@@ -1,26 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom'; // <-- ESSENCIAL PARA O CLIQUE FUNCIONAR
 import { LayoutGrid, BookOpen, Bot, User, Clock, ClipboardList, MessageSquare, ArrowRight } from 'lucide-react';
+import Header from '../components/Header';
 
-const Dashboard = () => {
+const Dashboard = () => {3
+
+  useEffect(() => {
+     console.log("Bem-vindo ao Dashboard!");
+  }, []);
+
   return (
     <div className="dashboard-bg">
-      {/* Cabeçalho */}
-      <header className="dash-header">
-        <div className="logo-area">
-          <h2 className="logo-title">Academia</h2>
-          <span className="logo-subtitle">Portal do Aluno</span>
-        </div>
-        
-        <nav className="dash-nav">
-          {/* Trocado de <a> para <Link> com o caminho correto */}
-          <Link to="/dashboard" className="active"><LayoutGrid size={18} /> Painel</Link>
-          <Link to="/disciplinas"><BookOpen size={18} /> Disciplinas</Link>
-          <Link to="/tutor"><Bot size={18} /> Tutor IA</Link>
-          <Link to="/perfil"><User size={18} /> Perfil</Link>
-        </nav>
-      </header>
-
+      <Header/>
       {/* Conteúdo Principal */}
       <main className="dash-main">
         <section className="welcome-text">

@@ -4,6 +4,7 @@ import {
   LayoutGrid, BookOpen, Bot, User, 
   Paperclip, ArrowUp, Volume2, Copy, RefreshCw, ThumbsDown 
 } from 'lucide-react';
+import Header from '../components/Header';
 
 const TutorIA = () => {
   // 1. ESTADOS (Guardando as informações em tempo real)
@@ -23,75 +24,36 @@ const TutorIA = () => {
 
   // 2. FUNÇÃO QUE CHAMA A API (O Requisito principal)
   // 2. FUNÇÃO QUE CHAMA A API E TRADUZ PARA PORTUGUÊS
-  const enviarMensagem = async (e) => {
-    e.preventDefault(); 
-    
-    if (!mensagem.trim()) return; 
+const enviarMensagem = async (e) => {
+    e.preventDefault();
+    if (!mensagem.trim()) return;
 
-    // Passo A: Coloca a mensagem do usuário na tela e limpa o input
-    const novaMensagemUsuario = {
-      id: Date.now(),
-      autor: 'João Silva',
-      texto: mensagem,
-      tipo: 'user'
-    };
-    
+    const novaMensagemUsuario = { id: Date.now(), autor: 'João Silva', texto: mensagem, tipo: 'user' };
     setHistorico((prev) => [...prev, novaMensagemUsuario]);
     setMensagem('');
     setErro('');
-    setCarregando(true); // Liga o indicador "A processar..."
+    setCarregando(true);
 
     try {
-      // Passo B1: Busca o conselho na API original (em inglês)
       const resposta = await fetch('https://api.adviceslip.com/advice');
-      if (!resposta.ok) throw new Error('Falha na API de conselhos');
+      if (!resposta.ok) throw new Error('Falha na API');
+      
       const dados = await resposta.json();
-      const textoEmIngles = dados.slip.advice;
-
-      // Passo B2: Envia o texto em inglês para uma API gratuita de tradução
-      // O encodeURIComponent garante que espaços e acentos não quebrem a URL
-      const urlTraducao = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textoEmIngles)}&langpair=en|pt`;
-      const respostaTraducao = await fetch(urlTraducao);
-      if (!respostaTraducao.ok) throw new Error('Falha na API de tradução');
-      
+      const respostaTraducao = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(dados.slip.advice)}&langpair=en|pt`);
       const dadosTraducao = await respostaTraducao.json();
-      const textoEmPortugues = dadosTraducao.responseData.translatedText;
       
-      // Passo B3: Mostra a frase traduzida na tela do chat
-      const novaMensagemIA = {
-        id: Date.now() + 1,
-        autor: 'Tutor IA',
-        texto: textoEmPortugues, 
-        tipo: 'ai'
-      };
-      
-      setHistorico((prev) => [...prev, novaMensagemIA]);
-      setCarregando(false); 
-
+      setHistorico((prev) => [...prev, { id: Date.now() + 1, autor: 'Tutor IA', texto: dadosTraducao.responseData.translatedText, tipo: 'ai' }]);
     } catch (err) {
-      // Passo C: Tratamento de Erros
-      setErro('Desculpe, ocorreu um erro na busca ou na tradução da resposta. Tente novamente.');
-      setCarregando(false);
+      setErro('Erro na conexão. Tente novamente.');
+    } finally {
+      // O bloco finally executa SEMPRE, garantindo que o loading suma
+      setCarregando(false); 
     }
   };
-
   return (
     <div className="dashboard-bg chat-page-wrapper">
       {/* Cabeçalho */}
-      <header className="dash-header">
-        <div className="logo-area">
-          <h2 className="logo-title">Academia</h2>
-          <span className="logo-subtitle">Portal do Aluno</span>
-        </div>
-        
-        <nav className="dash-nav">
-          <Link to="/dashboard"><LayoutGrid size={18} /> Painel</Link>
-          <Link to="/disciplinas"><BookOpen size={18} /> Disciplinas</Link>
-          <Link to="/tutor" className="active"><Bot size={18} /> Tutor IA</Link>
-          <Link to="/perfil"><User size={18} /> Perfil</Link>
-        </nav>
-      </header>
-
+      <Header/>
       {/* Conteúdo do Chat */}
       <main className="chat-main">
         <div className="chat-history">

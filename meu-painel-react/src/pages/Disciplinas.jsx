@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LayoutGrid, BookOpen, Bot, User } from 'lucide-react';
+import Header from '../components/Header';
 
 const Disciplinas = () => {
   // 1. Criámos a coleção de dados (Array de objetos) conforme exigido no Requisito 4
@@ -28,20 +29,7 @@ const Disciplinas = () => {
   return (
     <div className="dashboard-bg">
       {/* Cabeçalho */}
-      <header className="dash-header">
-        <div className="logo-area">
-          <h2 className="logo-title">Academia</h2>
-          <span className="logo-subtitle">Portal do Aluno</span>
-        </div>
-        
-        <nav className="dash-nav">
-          <Link to="/dashboard"><LayoutGrid size={18} /> Painel</Link>
-          <Link to="/disciplinas" className="active"><BookOpen size={18} /> Disciplinas</Link>
-          <Link to="/tutor"><Bot size={18} /> Tutor IA</Link>
-          <Link to="/perfil"><User size={18} /> Perfil</Link>
-        </nav>
-      </header>
-
+      <Header/>
       {/* Conteúdo Principal */}
       <main className="dash-main">
         <h1 className="page-title">Minhas Disciplinas</h1>

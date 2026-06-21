@@ -1,25 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LayoutGrid, BookOpen, Bot, User } from 'lucide-react';
+import Header from '../components/Header';
 
 const MeuPerfil = () => {
   return (
     <div className="dashboard-bg">
       {/* Cabeçalho */}
-      <header className="dash-header">
-        <div className="logo-area">
-          <h2 className="logo-title">Academia</h2>
-          <span className="logo-subtitle">Portal do Aluno</span>
-        </div>
-        
-        <nav className="dash-nav">
-          <Link to="/dashboard"><LayoutGrid size={18} /> Painel</Link>
-          <Link to="/disciplinas"><BookOpen size={18} /> Disciplinas</Link>
-          <Link to="/tutor"><Bot size={18} /> Tutor IA</Link>
-          <Link to="/perfil" className="active"><User size={18} /> Perfil</Link>
-        </nav>
-      </header>
-
+      <Header/>
       {/* Conteúdo Principal */}
       <main className="dash-main">
         

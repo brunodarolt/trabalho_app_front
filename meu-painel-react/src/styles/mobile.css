@@ -1,47 +1,70 @@
-@media (max-width: 768px){
-    aside{
-        display: none;
-    }
+/* mobile.css */
 
-    main,
-    .cadastro{
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  .dash-nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
 
-    main{
-        padding: 0 16px;
-    }
+  .disciplinas-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .dashboard__menu{
-        display: none;
-    }
+  .container {
+    flex-direction: column;
+  }
+  
+  .container aside {
+    display: none;
+  }
+}
 
-    .card{
-        flex-direction: column;
-    }
+@media (max-width: 480px) {
+  .dash-header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .perfil-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .chat-input-wrapper {
+    padding: 5px;
+  }
+}
 
-    .card__body{
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  /* Garante que o container principal vire uma coluna (vertical) */
+  .container {
+    flex-direction: column !important;
+    padding: 20px;
+    height: auto;
+  }
 
-    .card__footer{
-        width: 100%;
-        margin-top: 20px;
-    }
+  /* Esconde a parte lateral (Einstein) em telas pequenas para dar espaço ao formulário */
+  .container aside {
+    display: none; 
+  }
 
-    .card__button{
-        display: block;
-        width: 100%;
-    }
+  /* Faz o formulário ocupar toda a largura disponível */
+  .container main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
 
-    .card__group{
-        flex-direction: column;
-        gap: 0;
-    }
+  .cadastro {
+    width: 100%;
+    max-width: 400px; /* Limita a largura para não ficar muito esticado */
+  }
 
-    .card--33{
-        width: 100%;
-    }
-
-
+  /* Garante que os inputs preencham o formulário */
+  input {
+    width: 100%;
+    box-sizing: border-box; /* Essencial para o padding não quebrar o tamanho do input */
+  }
 }

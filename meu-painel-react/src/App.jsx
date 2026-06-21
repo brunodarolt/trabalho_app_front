@@ -10,23 +10,26 @@ import Dashboard from './pages/Dashboard';
 import Disciplinas from './pages/Disciplinas';
 import MeuPerfil from './pages/MeuPerfil';
 import TutorIA from './pages/TutorIA';
+import { UserProvider } from './contexts/UserContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/cadastro" element={<CadastroPasso1 />} />
-        <Route path="/cadastro-dados" element={<CadastroPasso2 />} />
-        <Route path="/recuperar-senha" element={<RecuperarSenha />} />
-        <Route path="/nova-senha" element={<NovaSenha />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/disciplinas" element={<Disciplinas />} />
-        <Route path='/perfil' element={<MeuPerfil />} />
-        <Route path='/tutor' element={<TutorIA />} />
-      </Routes>
-    </BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/cadastro" element={<CadastroPasso1 />} />
+          <Route path="/cadastro-dados" element={<CadastroPasso2 />} />
+          <Route path="/recuperar-senha" element={<RecuperarSenha />} />
+          <Route path="/nova-senha" element={<NovaSenha />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/disciplinas" element={<Disciplinas />} />
+          <Route path='/perfil' element={<MeuPerfil />} />
+          <Route path='/tutor' element={<TutorIA />} />
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 
