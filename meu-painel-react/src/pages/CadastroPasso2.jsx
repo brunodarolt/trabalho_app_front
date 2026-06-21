@@ -7,7 +7,7 @@ const CadastroPasso2 = () => {
   return (
     <div className="container">
       <aside>
-        <p>A educação não é a aprendizagem de factos, mas o treino da mente para pensar. <span>Albert Einstein</span></p>
+        <p>Educação não é aprendizado de fatos, mas o treinamento da mente para pensar. <span>Albert Einstein</span></p>
       </aside>
       <main>
         <div className="cadastro">
@@ -21,7 +21,7 @@ const CadastroPasso2 = () => {
             <label htmlFor="email">E-mail</label>
             <input id="email" type="email" placeholder="user@email.com" required />
             
-            <label htmlFor="senha">Palavra-passe</label>
+            <label htmlFor="senha">Senha</label>
             <input id="senha" type="password" placeholder="Crie uma palavra-passe" required />
             
             <button type="submit">Finalizar Registo</button>
