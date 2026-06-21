@@ -7,6 +7,7 @@ import CadastroPasso2 from './pages/CadastroPasso2';
 import RecuperarSenha from './pages/RecuperarSenha';
 import NovaSenha from './pages/NovaSenha';
 import Teste from './pages/Teste';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
         <Route path="/teste" element={<Teste />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

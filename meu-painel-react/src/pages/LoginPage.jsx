@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+   const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    navigate('/Dashboard');
+  };
   return (
     <div className="container">
       <aside>
@@ -10,11 +16,12 @@ const LoginPage = () => {
       <main>
         <div className="cadastro">
           <h1>Bem-vindo de volta</h1>
-          <form>
+
+          <form onSubmit={handleLogin}>
             <label>E-mail</label>
-            <input type="email" placeholder="user@email.com" />
+            <input type="email" placeholder="user@email.com"/>
             <label>Senha <Link to="/recuperar-senha">Esqueceu?</Link></label>
-            <input type="password" placeholder="Sua senha" />
+            <input type="password" placeholder="Sua senha"/>
             <button type="submit">Entrar</button>
           </form>
           <p className="registro">Não tem conta? <Link to="/cadastro">Registre-se agora</Link></p>

@@ -1,21 +1,24 @@
 function Dashboard() {
   return (
-    <>
+    <div className="dashboard">
       <header>
-        <h1>
-          Academia <span>Portal do aluno</span>
-        </h1>
+        <div className="dashboard__header">
+          <h1 className="dashboard__title">
+            Academia
+            <span>Portal do aluno</span>
+          </h1>
 
-        <nav>
-          <a href="#">Painel</a>
-          <a href="#">Disciplinas</a>
-          <a href="#">Tutor IA</a>
-          <a href="#">Perfil</a>
-        </nav>
+          <nav className="dashboard__menu">
+            <a href="#">Painel</a>
+            <a href="#">Disciplinas</a>
+            <a href="#">Tutor IA</a>
+            <a href="#">Perfil</a>
+          </nav>
+        </div>
       </header>
 
-      <main>
-        <div>
+      <main className="dashboard__body">
+        <div className="dashboard__hero">
           <h2>Boa noite, João</h2>
           <p>
             Bem-vindo de volta à sua sessão de estudos focada. Você tem
@@ -24,21 +27,29 @@ function Dashboard() {
           </p>
         </div>
 
-        <div>
-          <span>Em progresso</span>
-          <h3>Front-end</h3>
-          <p>
-            Aula 2: Conceitos de desenvolvimento front-end e Git + GitHub
-          </p>
+        <div className="card">
+          <div className="card__body">
+            <span className="card__badge">Em progresso</span>
 
-          <div>
-            <div>65%</div>
+            <h3 className="card__title">Front-end</h3>
+
+            <p>
+              Aula 2: Conceitos de desenvolvimento front-end e Git + GitHub
+            </p>
+
+            <div className="card__progress">
+              <div style={{ width: '65%' }}>65%</div>
+            </div>
           </div>
 
-          <button>Retomar estudos</button>
+          <div className="card__footer">
+            <button className="card__button">
+              Retomar estudos
+            </button>
+          </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

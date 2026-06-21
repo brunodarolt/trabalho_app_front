@@ -22,7 +22,7 @@ const CadastroPasso2 = () => {
             <input id="email" type="email" placeholder="user@email.com" required />
             
             <label htmlFor="senha">Senha</label>
-            <input id="senha" type="password" placeholder="Crie uma palavra-passe" required />
+            <input id="senha" type="password" placeholder="Crie uma Senha" required />
             
             <button type="submit">Finalizar Registo</button>
           </form>
