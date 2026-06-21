@@ -59,16 +59,45 @@ npm run build
 
 ```text
 .
+## Estrutura atual
+
+```text
+.
+├── public/
 ├── src/
 │   ├── components/
+│   │   └── Header.jsx
+│   │
+│   ├── contexts/
+│   │   └── UserContext.jsx
+│   │
 │   ├── pages/
-│   ├── assets/
+│   │   ├── Alunos.jsx
+│   │   ├── CadastroPasso1.jsx
+│   │   ├── CadastroPasso2.jsx
+│   │   ├── dashboard.jsx
+│   │   ├── Disciplinas.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── MeuPerfil.jsx
+│   │   ├── NovaSenha.jsx
+│   │   ├── RecuperarSenha.jsx
+│   │   └── TutorIA.jsx
+│   │
 │   ├── styles/
+│   │   ├── mobile.css
+│   │   └── styles.css
+│   │
 │   ├── App.jsx
 │   └── main.jsx
-├── public/
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
 ├── package.json
 └── README.md
+```
+
 ```
 
 ## Etapas sugeridas para os alunos
