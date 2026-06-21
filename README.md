@@ -1,9 +1,6 @@
-# Sistema Escolar
+## App Aluno
 
-Projeto desenvolvido utilizando React com o objetivo de criar uma interface moderna para gerenciamento de informações escolares.
-
-A proposta é desenvolver a aplicação por etapas, iniciando pela criação dos componentes, páginas e estilização, evoluindo para navegação, gerenciamento de estado e integração com APIs.
-
+O desenvolvimento da interface será realizado de forma gradual, iniciando com HTML e CSS puros, avançando para a implementação de responsividade e funcionalidades em JavaScript, e posteriormente reutilizando essa estrutura como base para o desenvolvimento em React.
 ## O que já existe
 
 O repositório já possui a estrutura inicial do projeto React configurada.
