@@ -15,6 +15,10 @@ Além disso, foram definidos os componentes e páginas que servirão de base par
 Desenvolver as principais telas do sistema:
 
 * Dashboard
+* Perfil
+* TutorIA acessíveis e navegáveis como SPA;
+*menu com indicação da rota ativa;
+*redirecionamento após o login.
 
 
 
@@ -140,6 +144,6 @@ npm run build
 * CSS3
 * React Router
 
-## Autor
+## final
 
 Projeto acadêmico desenvolvido para fins de aprendizagem em React e desenvolvimento frontend.
