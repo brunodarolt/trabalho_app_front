@@ -6,12 +6,9 @@ import Header from '../components/Header';
 const MeuPerfil = () => {
   return (
     <div className="dashboard-bg">
-      {/* Cabeçalho */}
       <Header/>
-      {/* Conteúdo Principal */}
       <main className="dash-main">
         
-        {/* Secção do Avatar e Nome */}
         <div className="perfil-header">
           <div className="avatar">JS</div>
           <div className="perfil-info">
@@ -20,14 +17,12 @@ const MeuPerfil = () => {
           </div>
         </div>
 
-        {/* Abas internas do Perfil */}
         <div className="perfil-tabs">
           <button className="tab active">Dados Pessoais</button>
           <button className="tab">Configurações</button>
           <button className="tab">Segurança</button>
         </div>
 
-        {/* Cartão com a Lista de Dados */}
         <div className="perfil-card">
           <div className="perfil-row">
             <span className="perfil-label">Nome Completo</span>

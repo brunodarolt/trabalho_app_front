@@ -1,5 +1,3 @@
-/* mobile.css */
-
 @media (max-width: 768px) {
   .dash-nav {
     flex-direction: column;
@@ -37,19 +35,16 @@
 }
 
 @media (max-width: 768px) {
-  /* Garante que o container principal vire uma coluna (vertical) */
   .container {
     flex-direction: column !important;
     padding: 20px;
     height: auto;
   }
 
-  /* Esconde a parte lateral (Einstein) em telas pequenas para dar espaço ao formulário */
   .container aside {
     display: none; 
   }
 
-  /* Faz o formulário ocupar toda a largura disponível */
   .container main {
     width: 100%;
     display: flex;
@@ -59,12 +54,11 @@
 
   .cadastro {
     width: 100%;
-    max-width: 400px; /* Limita a largura para não ficar muito esticado */
+    max-width: 400px;
   }
 
-  /* Garante que os inputs preencham o formulário */
   input {
     width: 100%;
-    box-sizing: border-box; /* Essencial para o padding não quebrar o tamanho do input */
+    box-sizing: border-box;
   }
 }

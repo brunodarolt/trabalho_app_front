@@ -4,28 +4,24 @@ import { Link, useNavigate } from 'react-router-dom';
 const LoginPage = () => {
   const navigate = useNavigate();
 
-  // 1. ESTADOS DO FORMULÁRIO (Para guardar o que o usuário digita e os erros)
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setErro(''); // Limpa mensagens de erro antigas
+    setErro(''); 
 
-    // 2. VALIDAÇÃO: Impede envio de campos vazios
     if (!email || !senha) {
       setErro('Por favor, preencha todos os campos obrigatórios.');
       return;
     }
 
-    // 3. VALIDAÇÃO: Verifica se o e-mail tem o formato correto (@ e ponto)
     if (!email.includes('@') || !email.includes('.')) {
       setErro('Por favor, digite um e-mail válido (ex: seu@email.com).');
       return;
     }
 
-    // Se passou por todas as regras, entra no sistema
     navigate('/dashboard');
   };
 
@@ -41,10 +37,8 @@ const LoginPage = () => {
         <div className="cadastro">
           <h1>Bem-vindo de volta</h1>
 
-          {/* 4. MENSAGEM DE ERRO NA TELA (Só renderiza se a variável 'erro' tiver texto) */}
           {erro && <div className="error-message">{erro}</div>}
 
-          {/* A propriedade noValidate impede que o balãozinho padrão do Chrome apareça, forçando a nossa mensagem vermelha */}
           <form onSubmit={handleLogin} noValidate>
             <label>E-mail</label>
             <input 

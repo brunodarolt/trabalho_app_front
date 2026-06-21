@@ -261,16 +261,13 @@ header{
     background-color: transparent;
 }
 
-/* =========================================
-   ESTILOS DO DASHBOARD
-========================================= */
+
 .dashboard-bg {
   background-color: #f8f9fa;
   min-height: 100vh;
-  font-family: 'Inter', sans-serif; /* Use a fonte que preferir */
+  font-family: 'Inter', sans-serif;
 }
 
-/* Cabeçalho */
 .dash-header {
   background-color: #ffffff;
   display: flex;
@@ -281,7 +278,7 @@ header{
 }
 
 .logo-title {
-  color: #1b5e20; /* Verde escuro */
+  color: #1b5e20;
   font-size: 20px;
   margin: 0;
 }
@@ -308,17 +305,15 @@ header{
 }
 
 .dash-nav a.active, .dash-nav a:hover {
-  color: #2e7d32; /* Verde principal */
+  color: #2e7d32;
   border-bottom: 2px solid #2e7d32;
   padding-bottom: 5px;
 }
 
-/* Main Content */
-/* Força a área principal a empilhar os itens de cima para baixo */
 .dash-main {
   display: flex;
-  flex-direction: column; /* O segredo está aqui! */
-  gap: 30px; /* Espaço perfeito entre as seções */
+  flex-direction: column;
+  gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -338,7 +333,6 @@ header{
   line-height: 1.5;
 }
 
-/* Garante que os cursos fiquem um embaixo do outro, ocupando a tela toda */
 .courses-grid {
   display: flex;
   flex-direction: column;
@@ -346,14 +340,12 @@ header{
   width: 100%;
 }
 
-/* Garante que os cartões de baixo fiquem lado a lado */
 .stats-grid {
   display: flex;
   gap: 20px;
   width: 100%;
 }
 
-/* Conserta o botão verde espremido */
 .btn-retomar {
   background-color: #2e7d32;
   color: white;
@@ -366,14 +358,13 @@ header{
   align-items: center;
   gap: 8px;
   transition: background 0.2s;
-  white-space: nowrap; /* Impede o texto do botão de quebrar para a linha de baixo */
+  white-space: nowrap; 
 }
 
 .btn-retomar:hover {
   background-color: #1b5e20;
 }
 
-/* Barra de Progresso */
 .progress-area {
   display: flex;
   align-items: center;
@@ -400,7 +391,6 @@ header{
   font-weight: 500;
 }
 
-/* Cartões de Estatísticas (Grid Inferior) */
 .stats-grid {
   display: flex;
   gap: 20px;
@@ -434,16 +424,12 @@ header{
   margin: 0;
 }
 
-/* =========================================
-   ESTILOS DA PÁGINA DE DISCIPLINAS
-========================================= */
 .page-title {
   color: #1c2b36;
   font-size: 24px;
   margin-bottom: 30px;
 }
 
-/* Cria uma grade com 2 colunas de tamanhos iguais */
 .disciplinas-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -473,7 +459,6 @@ header{
   font-weight: 600;
 }
 
-/* Variações das etiquetas (badges) */
 .badge-curso {
   background-color: #e8f5e9;
   color: #2e7d32;
@@ -497,7 +482,6 @@ header{
   font-weight: 500;
 }
 
-/* Botão que ocupa 100% da largura do cartão */
 .btn-block {
   width: 100%;
   background-color: #2e7d32;
@@ -515,16 +499,12 @@ header{
   background-color: #1b5e20;
 }
 
-/* =========================================
-   ESTILOS DA PÁGINA DE DISCIPLINAS
-========================================= */
 .page-title {
   color: #1c2b36;
   font-size: 24px;
   margin-bottom: 30px;
 }
 
-/* Cria uma grade com 2 colunas de tamanhos iguais */
 .disciplinas-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -554,7 +534,6 @@ header{
   font-weight: 600;
 }
 
-/* Variações das etiquetas (badges) */
 .badge-curso {
   background-color: #e8f5e9;
   color: #2e7d32;
@@ -586,7 +565,6 @@ header{
   font-weight: 500;
 }
 
-/* Botão que ocupa 100% da largura do cartão */
 .btn-block {
   width: 100%;
   background-color: #2e7d32;
@@ -604,11 +582,6 @@ header{
   background-color: #1b5e20;
 }
 
-/* =========================================
-   ESTILOS DA PÁGINA DE PERFIL
-========================================= */
-
-/* Cabeçalho do Perfil (Avatar + Info) */
 .perfil-header {
   display: flex;
   align-items: center;
@@ -619,7 +592,7 @@ header{
 .avatar {
   width: 80px;
   height: 80px;
-  background-color: #1b5e20; /* Verde escuro */
+  background-color: #1b5e20;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -641,7 +614,6 @@ header{
   margin: 0;
 }
 
-/* Abas internas (Dados Pessoais, etc) */
 .perfil-tabs {
   display: flex;
   gap: 30px;
@@ -664,7 +636,6 @@ header{
   color: #2e7d32;
 }
 
-/* A linha verde por baixo da aba ativa */
 .perfil-tabs .tab.active::after {
   content: '';
   position: absolute;
@@ -675,7 +646,6 @@ header{
   background-color: #2e7d32;
 }
 
-/* Cartão da lista de dados */
 .perfil-card {
   background: #ffffff;
   border: 1px solid #eaeaea;
@@ -689,13 +659,12 @@ header{
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Remove a linha de baixo do último item */
 .perfil-row:last-child {
   border-bottom: none;
 }
 
 .perfil-label {
-  width: 250px; /* Mantém as colunas da esquerda todas alinhadas */
+  width: 250px;
   color: #627d98;
   font-size: 14px;
   font-weight: 500;
@@ -710,11 +679,6 @@ header{
   color: #888;
 }
 
-/* =========================================
-   ESTILOS DA PÁGINA DO TUTOR IA
-========================================= */
-
-/* Trava a tela para o chat não rolar a página inteira, só as mensagens */
 .chat-page-wrapper {
   height: 100vh;
   display: flex;
@@ -727,7 +691,7 @@ header{
   display: flex;
   justify-content: center;
   overflow-y: auto;
-  padding: 40px 20px 150px 20px; /* O espaço de 150px embaixo impede que o input esconda a última mensagem */
+  padding: 40px 20px 150px 20px;
 }
 
 .chat-history {
@@ -744,7 +708,6 @@ header{
   align-items: flex-start;
 }
 
-/* Avatares */
 .chat-avatar {
   width: 36px;
   height: 36px;
@@ -757,7 +720,7 @@ header{
 }
 
 .avatar-user {
-  background-color: #2b9e76; /* Verde um pouco mais claro que o principal */
+  background-color: #2b9e76;
   color: white;
   font-size: 14px;
 }
@@ -768,7 +731,6 @@ header{
   color: #333;
 }
 
-/* Conteúdo das mensagens */
 .chat-content h4 {
   margin: 0 0 8px 0;
   font-size: 15px;
@@ -782,7 +744,6 @@ header{
   font-size: 15px;
 }
 
-/* Ícones debaixo da resposta da IA */
 .chat-actions {
   display: flex;
   gap: 12px;
@@ -802,7 +763,6 @@ header{
   color: #333;
 }
 
-/* BARRA DE INPUT FLUTUANTE */
 .chat-bottom-area {
   position: fixed;
   bottom: 0;
@@ -812,7 +772,6 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Cria um degradê para a barra não ficar "solta" visualmente */
   background: linear-gradient(180deg, transparent, #f8f9fa 30%);
 }
 
@@ -883,9 +842,6 @@ header{
   margin-top: 15px;
 }
 
-/* =========================================
-   MENSAGEM DE ERRO (Requisito 7)
-========================================= */
 .error-message {
   background-color: #fee2e2;
   color: #b91c1c;
@@ -893,7 +849,7 @@ header{
   border-radius: 6px;
   font-size: 14px;
   margin-bottom: 20px;
-  border-left: 4px solid #ef4444; /* Uma barra vermelha na lateral */
+  border-left: 4px solid #ef4444;
   text-align: left;
   font-weight: 500;
 }

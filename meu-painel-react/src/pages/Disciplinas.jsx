@@ -4,7 +4,6 @@ import { LayoutGrid, BookOpen, Bot, User } from 'lucide-react';
 import Header from '../components/Header';
 
 const Disciplinas = () => {
-  // 1. Criámos a coleção de dados (Array de objetos) conforme exigido no Requisito 4
   const listaDisciplinas = [
     {
       id: 1,
@@ -28,13 +27,10 @@ const Disciplinas = () => {
 
   return (
     <div className="dashboard-bg">
-      {/* Cabeçalho */}
       <Header/>
-      {/* Conteúdo Principal */}
       <main className="dash-main">
         <h1 className="page-title">Minhas Disciplinas</h1>
 
-        {/* 2. Aqui acontece a renderização dinâmica da lista usando o .map() */}
         <div className="disciplinas-grid">
           {listaDisciplinas.map((disciplina) => (
             <div key={disciplina.id} className="dash-card disciplina-card">
