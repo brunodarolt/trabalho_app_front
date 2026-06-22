@@ -33,6 +33,9 @@ Desenvolver as principais telas do sistema:
 ### Instalar dependências
 
 ```bash
+cd meu-painel react-react
+```
+```bash
 npm install
 ```
 
