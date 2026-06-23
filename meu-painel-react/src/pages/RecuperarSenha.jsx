@@ -5,7 +5,11 @@ const RecuperarSenha = () => {
   const navigate = useNavigate();
   return (
     <div className="container">
-      <aside><p>Recuperar <span>Senha</span></p></aside>
+      <aside>
+        <p>Educação não é aprendizado de fatos, mas o treinamento da mente para pensar.
+          <span> Albert Einstein</span>
+        </p>
+      </aside>
       <main>
         <div className="cadastro">
           <h1>Esqueceu sua senha?</h1>
