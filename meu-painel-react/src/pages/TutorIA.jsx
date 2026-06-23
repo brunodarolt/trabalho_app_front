@@ -7,12 +7,10 @@ import {
 import Header from '../components/Header';
 
 const TutorIA = () => {
-  // 1. ESTADOS (Guardando as informações em tempo real)
-  const [mensagem, setMensagem] = useState(''); // O que o aluno está digitando
-  const [carregando, setCarregando] = useState(false); // O aviso de "Pensando..."
-  const [erro, setErro] = useState(''); // Guardar possível erro da API
+  const [mensagem, setMensagem] = useState('');
+  const [carregando, setCarregando] = useState(false);
+  const [erro, setErro] = useState('');
   
-  // Lista inicial de mensagens (já começa com uma saudação do Tutor)
   const [historico, setHistorico] = useState([
     {
       id: 1,
@@ -22,8 +20,6 @@ const TutorIA = () => {
     }
   ]);
 
-  // 2. FUNÇÃO QUE CHAMA A API (O Requisito principal)
-  // 2. FUNÇÃO QUE CHAMA A API E TRADUZ PARA PORTUGUÊS
 const enviarMensagem = async (e) => {
     e.preventDefault();
     if (!mensagem.trim()) return;
@@ -46,19 +42,15 @@ const enviarMensagem = async (e) => {
     } catch (err) {
       setErro('Erro na conexão. Tente novamente.');
     } finally {
-      // O bloco finally executa SEMPRE, garantindo que o loading suma
       setCarregando(false); 
     }
   };
   return (
     <div className="dashboard-bg chat-page-wrapper">
-      {/* Cabeçalho */}
       <Header/>
-      {/* Conteúdo do Chat */}
       <main className="chat-main">
         <div className="chat-history">
           
-          {/* 3. RENDERIZAÇÃO DA LISTA DE MENSAGENS */}
           {historico.map((msg) => (
             <div className="chat-message" key={msg.id}>
               {msg.tipo === 'user' ? (
@@ -71,7 +63,6 @@ const enviarMensagem = async (e) => {
                 <h4>{msg.autor}</h4>
                 <p>{msg.texto}</p>
                 
-                {/* Mostra os botões apenas se a mensagem for da IA */}
                 {msg.tipo === 'ai' && (
                   <div className="chat-actions">
                     <button><Volume2 size={16} /></button>
@@ -84,7 +75,6 @@ const enviarMensagem = async (e) => {
             </div>
           ))}
 
-          {/* INDICADOR DE CARREGAMENTO */}
           {carregando && (
             <div className="chat-message">
               <div className="chat-avatar avatar-ai"><Bot size={20} /></div>
@@ -95,7 +85,6 @@ const enviarMensagem = async (e) => {
             </div>
           )}
 
-          {/* MENSAGEM DE ERRO NA TELA (Aproveitando a classe CSS vermelha que criamos antes) */}
           {erro && (
             <div className="error-message" style={{ marginTop: '20px' }}>
               {erro}
@@ -105,7 +94,6 @@ const enviarMensagem = async (e) => {
         </div>
       </main>
 
-      {/* Área do Input Flutuante - Agora é um <form> para funcionar o botão "Enter" do teclado */}
       <div className="chat-bottom-area">
         <form onSubmit={enviarMensagem} className="chat-input-wrapper">
           <button type="button" className="btn-attach">
@@ -117,7 +105,7 @@ const enviarMensagem = async (e) => {
             className="chat-input"
             value={mensagem}
             onChange={(e) => setMensagem(e.target.value)}
-            disabled={carregando} /* Trava o campo enquanto a IA pensa */
+            disabled={carregando}
           />
           <button type="submit" className="btn-send" disabled={carregando}>
             <ArrowUp size={20} />
